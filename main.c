@@ -11,10 +11,11 @@ int main(void) {
       exit(EXIT_FAILURE);
     }
 
-    mvaddstr(1, 1, "Test");
+    mvaddstr(1, 1, "Ncurses Test");
+    addstr("\nPress any key to exit...");
     refresh();
-    sleep(3);
 
+    getch();
     delwin(mainwin);
     endwin();
     refresh();
